@@ -1,3 +1,6 @@
+/**
+ * @description   : Test class for SetupAuditTrail2All_Batch
+ */
 @isTest
 private class SetupAuditTrail2All_BatchTest {
    static testMethod void test() {

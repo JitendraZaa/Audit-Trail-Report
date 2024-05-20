@@ -1,3 +1,6 @@
+/**
+ * @description : Batch class to retrieve all records from the SetupAuditTrail object created in the last 7 days and insert them into the SetupAuditTrail2__c object.
+ */
 public with sharing class SetupAuditTrail2LastSevenDays_Batch implements Database.Batchable<sObject> {
     public Database.QueryLocator start(Database.BatchableContext batchContext) {
         DateTime now = DateTime.now();

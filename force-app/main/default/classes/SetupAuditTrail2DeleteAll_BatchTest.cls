@@ -1,3 +1,7 @@
+/**
+ * @name SetupAuditTrail2DeleteAll_BatchTest
+ * @description : Test class for SetupAuditTrail2DeleteAll_Batch
+ */
 @isTest
 private class SetupAuditTrail2DeleteAll_BatchTest {
     static testMethod void test() {

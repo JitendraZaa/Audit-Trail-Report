@@ -1,3 +1,6 @@
+/**
+ * Test class for SetupAuditTrail2Last24_BatchSchedule
+ */
 @isTest
 public class SetupAuditTrail2Last24_BatchScheduleTest {
     @isTest static void testSchedule() {

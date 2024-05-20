@@ -1,3 +1,7 @@
+/**
+ * @description  : Controller class to perform various operations on audit trails.
+
+ */
 public with sharing class SetupAuditTrailController {
     @AuraEnabled
     public static void copyLast24HoursSetupAuditTrailRecords() {

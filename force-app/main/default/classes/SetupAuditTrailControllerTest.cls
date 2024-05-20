@@ -1,3 +1,7 @@
+/**
+ * @name SetupAuditTrailControllerTest
+ * @description Test class for SetupAuditTrailController
+ */
 @isTest
 private class SetupAuditTrailControllerTest {
     static testMethod void testCopyLast24HoursSetupAuditTrailRecords() {

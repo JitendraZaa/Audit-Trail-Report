@@ -1,4 +1,11 @@
+/**
+ * @Description :   Batch class to fetch SetupAuditTrail records and insert them into SetupAuditTrail2__c object.
+ */
 public with sharing class SetupAuditTrail2All_Batch implements Database.Batchable<sObject> {
+
+    /**
+     * @Description :   Start method to fetch SetupAuditTrail records.
+     */
     public Database.QueryLocator start(Database.BatchableContext batchContext) {
     	String setupAuditTrailQuery = 'SELECT Id, Action, Display, CreatedBy.Name, CreatedDate FROM SetupAuditTrail';
     	if(Test.isRunningTest()) {
@@ -7,6 +14,9 @@ public with sharing class SetupAuditTrail2All_Batch implements Database.Batchabl
     	return Database.getQueryLocator(setupAuditTrailQuery);
 	}
 
+    /**
+     * @Description :   Execute method to insert SetupAuditTrail records into SetupAuditTrail2__c object.
+     */
     public void execute(Database.BatchableContext batchContext, List<SetupAuditTrail> records) {
         String defaultCreatedByName = Label.SetupAuditTrail2_SfdcString;
 
@@ -40,10 +50,16 @@ public with sharing class SetupAuditTrail2All_Batch implements Database.Batchabl
         }
     }
 
+    /**
+     * @Description :   Finish method to log the completion of the batch process.
+     */
     public void finish(Database.BatchableContext batchContext) {
         System.debug('Batch process completed. Processed ' + batchContext.getJobId());
     }
 
+    /**
+     * @Description :   Method to log errors while inserting records.
+     */
     private void logErrors(Database.SaveResult[] results) {
         List<String> errorMessages = new List<String>();
         for (Database.SaveResult result : results) {

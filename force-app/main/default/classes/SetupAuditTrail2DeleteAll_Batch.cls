@@ -1,3 +1,6 @@
+/**
+ * @description : Batch class to delete all records from the SetupAuditTrail2__c object.
+ */
 public with sharing class SetupAuditTrail2DeleteAll_Batch implements Database.Batchable<sObject> {
     public Database.QueryLocator start(Database.BatchableContext batchContext) {
         return Database.getQueryLocator([SELECT Id FROM SetupAuditTrail2__c]);

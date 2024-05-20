@@ -1,3 +1,8 @@
+/**
+ * @name SetupAuditTrail2Last24Hours_BatchTest
+ * @description : Test class for SetupAuditTrail2Last24Hours_Batch
+ 
+ */
 @isTest
 private class SetupAuditTrail2Last24Hours_BatchTest {
     static testMethod void test() {
